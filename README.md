@@ -1,2 +1,2 @@
-# pickydesign
-Set of tools for quick designs.
+## pickydesign
+Set of tools to pick and organize designs.
