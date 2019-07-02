@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ColorBox from "../ColorBox";
-
+import "./style.css";
 export default class Palette extends Component {
     renderList() {
         return this.props.colorsPalette.colors.map(color => {
