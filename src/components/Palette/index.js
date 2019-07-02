@@ -12,7 +12,9 @@ export default class Palette extends Component {
         return (
             <div className="Palette">
                 {/*Navbar will go here*/}
-                <h2 style={{ marginLeft: 20 }}>Palette Component</h2>
+                <h2 style={{ marginLeft: 20, color: "#ffffff" }}>
+                    Palette Component
+                </h2>
                 <div className="Palette-colors">{this.renderList()}</div>
             </div>
         );
