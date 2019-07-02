@@ -32,9 +32,10 @@ export default class Palette extends Component {
                 {/*Navbar will go here*/}
                 <Navbar level={level} changeLevel={this.changeLevel} />
 
-                <h2 style={{ marginLeft: 20, color: "#ffffff" }}>
-                    Palette Component
-                </h2>
+                <div className="Palette__menu">
+                    <i class="fas fa-arrow-left" />
+                    <h2>Palette Collection</h2>
+                </div>
                 <div className="Palette__colors">{this.renderList()}</div>
             </div>
         );

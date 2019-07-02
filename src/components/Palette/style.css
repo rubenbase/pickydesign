@@ -7,3 +7,19 @@
     flex-wrap: wrap;
     height: 90%;
 }
+
+.Palette__menu {
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+    line-height: 15px;
+    color: white;
+}
+
+.Palette__menu h2 {
+    margin-left: 15px;
+    color: white;
+}
+.Palette__menu i {
+    margin-top: 5px;
+}
