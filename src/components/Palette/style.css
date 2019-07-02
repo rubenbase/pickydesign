@@ -2,7 +2,7 @@
     height: 100vh;
 }
 
-.Palette-colors {
+.Palette__colors {
     display: flex;
     flex-wrap: wrap;
     height: 90%;
