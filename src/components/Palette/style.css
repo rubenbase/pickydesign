@@ -1,5 +1,9 @@
+.Palette {
+    height: 100vh;
+}
+
 .Palette-colors {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    height: 90%;
 }
