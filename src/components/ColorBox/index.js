@@ -21,16 +21,16 @@ export default class ColorBox extends Component {
     }
 
     render() {
-        const { color, name } = this.props.background;
+        const { hex, name } = this.props.background;
 
         return (
             <div
-                style={{ background: color }}
+                style={{ background: hex }}
                 className="ColorBox"
                 onClick={this.copyToClipboard}
             >
                 <div
-                    style={{ background: color }}
+                    style={{ background: hex }}
                     className={`ColorBox__overlay ${this.state.copied &&
                         "show"}`}
                 />
@@ -39,7 +39,7 @@ export default class ColorBox extends Component {
                         "show"}`}
                 >
                     <h1>copied!</h1>
-                    <p>{color}</p>
+                    <p>{hex}</p>
                 </div>
                 <div className="ColorBox__container">
                     <div className="ColorBox__content">
