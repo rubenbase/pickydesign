@@ -10,7 +10,13 @@ export default class Navbar extends Component {
             <header className="Navbar">
                 <div className="Navbar__logo">
                     <a href="/">
-                        Picky<span style={{ fontWeight: 700 }}>Design</span>
+                        <span className="Navbar__logo__text--picky">Picky</span>
+                        <span
+                            className="Navbar__logo__text--design"
+                            style={{ fontWeight: 700 }}
+                        >
+                            Design
+                        </span>
                     </a>
                 </div>
                 <div className="Navbar__slider__container">

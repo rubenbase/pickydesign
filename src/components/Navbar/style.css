@@ -16,6 +16,15 @@
     height: 100%;
     background-color: #021b35;
 }
+
+.Navbar__logo__text--picky {
+    letter-spacing: -3px;
+    font-style: italic;
+}
+
+.Navbar__logo__text--design {
+    font-family: "Pacifico", cursive;
+}
 .Navbar__slider__container {
     display: flex;
     width: 100%;
