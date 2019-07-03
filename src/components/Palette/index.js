@@ -20,6 +20,7 @@ export default class Palette extends Component {
         return this.props.palette.colors[this.state.level].map(color => {
             return (
                 <ColorBox
+                    key={color.id}
                     background={color[this.state.format]}
                     name={color.name}
                 />

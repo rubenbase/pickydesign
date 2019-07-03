@@ -1,5 +1,8 @@
 .Palette {
-    height: 94vh;
+    height: 99vh;
+    min-height: 1284px;
+    display: flex;
+    flex-direction: column;
 }
 
 .Palette__colors {
