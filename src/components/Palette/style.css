@@ -1,5 +1,5 @@
 .Palette {
-    height: 100vh;
+    height: 94vh;
 }
 
 .Palette__colors {
@@ -11,15 +11,76 @@
 .Palette__menu {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-left: 13px;
+    height: 56px;
     line-height: 15px;
     color: white;
+    position: relative;
 }
 
-.Palette__menu h2 {
-    margin-left: 15px;
-    color: white;
+.Palette__menu--right {
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin-right: 13px;
 }
-.Palette__menu i {
-    margin-top: 5px;
+
+.Palette__menu__title {
+    display: inline;
+}
+
+.Palette__menu__emoji {
+    font-size: 22px;
+}
+.Palette__footer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Palette__footer i {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.Palette__footer h2 {
+    margin: 16px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(-5px);
+    }
+}
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+}
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
 }

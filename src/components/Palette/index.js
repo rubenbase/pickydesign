@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import ColorBox from "../ColorBox";
 import "./style.css";
 import Navbar from "../Navbar";
-import PaletteFooter from "../PaletteFooter";
 export default class Palette extends Component {
     constructor(props) {
         super(props);
@@ -19,7 +18,6 @@ export default class Palette extends Component {
 
     renderList() {
         return this.props.palette.colors[this.state.level].map(color => {
-            console.log(color);
             return (
                 <ColorBox
                     background={color[this.state.format]}
@@ -38,6 +36,8 @@ export default class Palette extends Component {
     }
 
     render() {
+        const { paletteName, emoji } = this.props.palette;
+
         const { level } = this.state;
         return (
             <div className="Palette">
@@ -49,12 +49,15 @@ export default class Palette extends Component {
                 />
 
                 <div className="Palette__menu">
-                    <i className="fas fa-arrow-left" />
-                    <h2>Palette Collection</h2>
+                    <div className="Palette__menu--right">
+                        <span className="Palette__menu__emoji">{emoji}</span>
+                        <h2 className="Palette__menu__title">{paletteName}</h2>
+                    </div>
                 </div>
-                <div className="Palette__colors">
-                    {this.renderList()}
-                    <PaletteFooter />
+                <div className="Palette__colors">{this.renderList()}</div>
+                <div className="Palette__footer">
+                    <i className="fas fa-arrow-left animated bounce" />
+                    <h2>Palette Collection</h2>
                 </div>
             </div>
         );

@@ -12,6 +12,7 @@
     height: 30px;
     position: absolute;
     top: 50%;
+    cursor: pointer;
     left: 50%;
     margin-left: -50px;
     margin-top: -15px;
@@ -34,7 +35,6 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
-    width: 100%;
     padding: 10px;
     color: black;
     letter-spacing: 2px;
