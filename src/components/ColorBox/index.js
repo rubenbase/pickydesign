@@ -11,8 +11,8 @@ export default class ColorBox extends Component {
 
     copyToClipboard() {
         if (!navigator) return alert("Action not supported on this browser");
-        const { color } = this.props.background;
-        navigator.clipboard.writeText(color);
+        const { background } = this.props;
+        navigator.clipboard.writeText(background);
         this.setState({ copied: true }, () => {
             setTimeout(() => {
                 this.setState({ copied: false });
@@ -21,16 +21,15 @@ export default class ColorBox extends Component {
     }
 
     render() {
-        const { hex, name } = this.props.background;
-
+        const { background, name } = this.props;
         return (
             <div
-                style={{ background: hex }}
+                style={{ background }}
                 className="ColorBox"
                 onClick={this.copyToClipboard}
             >
                 <div
-                    style={{ background: hex }}
+                    style={{ background }}
                     className={`ColorBox__overlay ${this.state.copied &&
                         "show"}`}
                 />
@@ -39,7 +38,7 @@ export default class ColorBox extends Component {
                         "show"}`}
                 >
                     <h1>copied!</h1>
-                    <p>{hex}</p>
+                    <p>{background}</p>
                 </div>
                 <div className="ColorBox__container">
                     <div className="ColorBox__content">

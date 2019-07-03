@@ -34,6 +34,22 @@ const style = {
 };
 
 export default class Navbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            format: "HEX"
+        };
+
+        this.onSelectChange = this.onSelectChange.bind(this);
+    }
+
+    onSelectChange(selected) {
+        this.setState({ format: selected.value }, () => {
+            this.props.changeCopyFormat(selected.value);
+        });
+    }
+
     render() {
         return (
             <header className="Navbar">
@@ -65,7 +81,11 @@ export default class Navbar extends Component {
                     </div>
                     <div className="Navbar__select">
                         <Select
-                            defaultValue={{ value: "HEX", label: "HEX" }}
+                            onChange={this.onSelectChange}
+                            defaultValue={{
+                                value: this.state.format,
+                                label: this.state.format
+                            }}
                             options={options}
                             styles={style}
                             theme={theme => ({
