@@ -67,7 +67,7 @@ export default class Navbar extends Component {
                 <div className="Navbar__container">
                     <div className="Navbar__slider__container">
                         <span className="Navbar__slider__detail">
-                            Level: {this.props.level}
+                            Contrast: {this.props.level}{" "}
                         </span>
                         <div className="Navbar__slider">
                             <Slider

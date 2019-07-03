@@ -1,6 +1,6 @@
 .Palette {
     height: 99vh;
-    min-height: 1284px;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
 }
