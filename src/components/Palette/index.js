@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import ColorBox from "../ColorBox";
 import "./style.css";
 import Navbar from "../Navbar";
-
+import PaletteFooter from "../PaletteFooter";
 export default class Palette extends Component {
     constructor(props) {
         super(props);
@@ -52,7 +52,10 @@ export default class Palette extends Component {
                     <i className="fas fa-arrow-left" />
                     <h2>Palette Collection</h2>
                 </div>
-                <div className="Palette__colors">{this.renderList()}</div>
+                <div className="Palette__colors">
+                    {this.renderList()}
+                    <PaletteFooter />
+                </div>
             </div>
         );
     }
