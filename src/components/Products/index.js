@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 export default class Products extends Component {
     render() {
@@ -48,8 +49,13 @@ export default class Products extends Component {
                                 </h3>
                                 <p className="Products__hero__fourth">
                                     * This website is still in early mode, new
-                                    content will be added soon. You can
-                                    colaborate here ;)
+                                    content will be added soon :) <br />
+                                    <br />
+                                    <i
+                                        style={{}}
+                                        className="fas fa-arrow-right animated bounce"
+                                    />{" "}
+                                    You can colaborate here
                                 </p>
                             </div>
                             <div
@@ -61,8 +67,38 @@ export default class Products extends Component {
                                     alt="Hero"
                                     className="Products__hero__img  "
                                 />
-                                <h3 className="text">Check it out!</h3>
+                                <h3 className="text">Check it!</h3>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="Product__section">
+                    <div>
+                        <Link class="Product__box__link" to="/palettes">
+                            <div class="Product__box img-gradient-blue">
+                                <img
+                                    alt=""
+                                    src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2016/11/pablo.png"
+                                    width="400"
+                                />
+                                <h2 className="Product__box__title">Colors</h2>
+                            </div>
+                        </Link>
+                        <div class="Product__box img-gradient-pink">
+                            <img
+                                alt=""
+                                src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2016/11/pablo.png"
+                                width="400"
+                            />
+                            <h2 className="Product__box__title">Shadows</h2>
+                        </div>
+                        <div class="Product__box img-gradient-green">
+                            <img
+                                alt=""
+                                src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2016/11/pablo.png"
+                                width="400"
+                            />
+                            <h2 className="Product__box__title">Learn</h2>
                         </div>
                     </div>
                 </div>
