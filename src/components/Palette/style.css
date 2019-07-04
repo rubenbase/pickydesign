@@ -15,11 +15,15 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-left: 13px;
+
     height: 56px;
     line-height: 15px;
     color: white;
     position: relative;
+}
+
+.Palette__menu.show {
+    background: white;
 }
 
 .Palette__menu--right {
@@ -51,8 +55,11 @@
     margin-top: 4px;
 }
 
-.Palette__footer h2 {
+.Palette__footer__back {
+    color: white;
+    font-size: 22px;
     margin: 16px;
+    text-decoration: none;
 }
 
 .animated {

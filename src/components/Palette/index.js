@@ -1,19 +1,30 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import ColorBox from "components/ColorBox";
-import "./style.css";
 import Navbar from "components/ColorNavbar";
+import "./style.css";
 export default class Palette extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             level: 500,
-            format: "hex"
+            format: "hex",
+            copied: false,
+            colorPicked: {
+                colorValue: null,
+                colorName: null
+            }
         };
 
         this.changeLevel = this.changeLevel.bind(this);
         this.changeCopyFormat = this.changeCopyFormat.bind(this);
+        this.changeCopied = this.changeCopied.bind(this);
+    }
+
+    changeCopied(copied) {
+        this.setState({ copied });
+        console.log("from parent ", this.state.copied);
     }
 
     renderList() {
@@ -39,6 +50,7 @@ export default class Palette extends Component {
                     key={color.id}
                     background={color[this.state.format]}
                     name={color.name}
+                    onChangeCopied={this.changeCopied}
                 />
             );
         });
@@ -54,7 +66,6 @@ export default class Palette extends Component {
 
     render() {
         const { paletteName, emoji } = this.props.palette;
-
         const { level } = this.state;
         return (
             <div className="Palette">
@@ -65,7 +76,9 @@ export default class Palette extends Component {
                     changeLevel={this.changeLevel}
                 />
 
-                <div className="Palette__menu">
+                <div
+                    className={`Palette__menu ${this.state.copied && "show "}`}
+                >
                     <div className="Palette__menu--right">
                         <span className="Palette__menu__emoji">{emoji}</span>
                         <h2 className="Palette__menu__title">{paletteName}</h2>
@@ -74,7 +87,9 @@ export default class Palette extends Component {
                 <div className="Palette__colors">{this.renderList()}</div>
                 <div className="Palette__footer">
                     <i className="fas fa-arrow-left animated bounce" />
-                    <h2>Palette Collection</h2>
+                    <Link className="Palette__footer__back" to="/palettes">
+                        Palette Collection
+                    </Link>
                 </div>
             </div>
         );
