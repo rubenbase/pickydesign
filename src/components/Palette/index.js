@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import ColorBox from "../ColorBox";
+import ColorBox from "components/ColorBox";
 import "./style.css";
-import Navbar from "../Navbar";
+import Navbar from "components/ColorNavbar";
 export default class Palette extends Component {
     constructor(props) {
         super(props);
@@ -17,6 +17,22 @@ export default class Palette extends Component {
     }
 
     renderList() {
+        if (!this.props.palette) {
+            return (
+                // In the future, redirect this to Palette Collection or 404
+                <div
+                    style={{
+                        width: "100%",
+                        color: "white",
+                        display: "flex",
+                        justifyContent: "center"
+                    }}
+                >
+                    <h2>Palette Not Found</h2>
+                </div>
+            );
+        }
+
         return this.props.palette.colors[this.state.level].map(color => {
             return (
                 <ColorBox
