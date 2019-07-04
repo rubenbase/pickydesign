@@ -9,9 +9,9 @@ export default class Home extends Component {
             <>
                 <Navbar />
                 <div style={{ color: "white" }} className="Home">
-                    <h1>Home</h1>
                     <Products />
                     <Link to="/palettes">Palettes List</Link>
+                    <h2>Testing</h2>
                 </div>
             </>
         );

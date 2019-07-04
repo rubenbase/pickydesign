@@ -38,11 +38,11 @@ export default class ColorBox extends Component {
                 <div
                     style={{ background }}
                     className={`ColorBox__overlay ${this.state.copied &&
-                        "showw"}`}
+                        "show"}`}
                 />
                 <div
                     className={`ColorBox__overlay__msg ${this.state.copied &&
-                        "showw"}`}
+                        "show"}`}
                 >
                     <h1>copied!</h1>
                     <p>{background}</p>
