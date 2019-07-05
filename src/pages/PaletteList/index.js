@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+
 import { Link } from "react-router-dom";
 
 export default class PaleteList extends Component {
@@ -21,9 +23,18 @@ export default class PaleteList extends Component {
         return (
             <>
                 <Navbar />
-                <div style={{ color: "white" }} className="PaletteList">
-                    <h1>PaleteList</h1>
-                    {this.renderList()}
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        color: "white"
+                    }}
+                    className="Home"
+                >
+                    <div style={{ color: "white" }} className="PaletteList">
+                        <h1>PaleteList</h1>
+                        {this.renderList()}
+                    </div>
                 </div>
             </>
         );

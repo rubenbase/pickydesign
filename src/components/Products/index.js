@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import img1 from "assets/img/palette.jpg";
+import img2 from "assets/img/lock.jpg";
 import "./style.css";
 export default class Products extends Component {
     render() {
@@ -20,9 +22,10 @@ export default class Products extends Component {
                                 </h3>
                                 <h1
                                     style={{
-                                        marginLeft: 150,
-                                        marginTop: -20,
-                                        fontSize: "40px",
+                                        marginLeft: 200,
+                                        marginTop: -45,
+                                        marginBottom: -5,
+                                        fontSize: "80px",
                                         fontWeight: 900
                                     }}
                                 >
@@ -55,7 +58,17 @@ export default class Products extends Component {
                                         style={{}}
                                         className="fas fa-arrow-right animated bounce"
                                     />{" "}
-                                    You can colaborate here
+                                    <a
+                                        style={{
+                                            textDecoration: "underline",
+                                            color: "white"
+                                        }}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://github.com/rubenbase/pickydesign"
+                                    >
+                                        You can colaborate here
+                                    </a>
                                 </p>
                             </div>
                             <div
@@ -78,28 +91,21 @@ export default class Products extends Component {
                             <div class="Product__box img-gradient-blue">
                                 <img
                                     alt=""
-                                    src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2016/11/pablo.png"
+                                    src={img1}
                                     width="400"
+                                    height="200"
                                 />
                                 <h2 className="Product__box__title">Colors</h2>
                             </div>
                         </Link>
-                        <div class="Product__box img-gradient-pink">
-                            <img
-                                alt=""
-                                src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2016/11/pablo.png"
-                                width="400"
-                            />
+                        {/* <div class="Product__box img-gradient-pink">
+                            <img alt="" src={img2} width="400" height="200" />
                             <h2 className="Product__box__title">Shadows</h2>
                         </div>
                         <div class="Product__box img-gradient-green">
-                            <img
-                                alt=""
-                                src="https://bootstrapcreative.com/wp-bc/wp-content/uploads/2016/11/pablo.png"
-                                width="400"
-                            />
+                            <img alt="" src={img2} width="400" height="200" />
                             <h2 className="Product__box__title">Learn</h2>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

@@ -1,0 +1,9 @@
+.Footer {
+    display: block;
+}
+.Footer__container {
+    color: black;
+    background: #ecde10;
+    padding: 10px;
+    font-weight: 200;
+}
