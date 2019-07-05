@@ -23,24 +23,15 @@ cd pickydesign
 npm:
 
 ```sh
-npm install
+npm install && npm run start
 ```
-
-```sh
-npm run start
-```
-
 
 yarn:
 
 ```sh
-yarn
-```
+yarn && yarn start
 
-```sh
-yarn start
 ```
-
 
 ## Future Release History
 * 0.4.0
