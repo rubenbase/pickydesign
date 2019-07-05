@@ -5,7 +5,7 @@
 
 This project aim to be the open source default for design tools. From tools to manage colors to designs, animations, shadows, color theory and sections to learn the concepts behind UI/UX and Frontend development.
 
-![Hello Creatives!](https://github.com/rubenbase/pickydesign/blob/master/public/cover.png)
+![Hello Creatives!](https://github.com/rubenbase/pickydesign/blob/master/cover.png)
 
 ## Installation
 
