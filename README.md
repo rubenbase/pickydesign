@@ -2,6 +2,7 @@
 > Set of tools for designers
 
 ![DEPENDENCIES][dependencies-image]
+![LICENSE][license-image]
 
 This project aim to be the open source default for design tools. From tools to manage colors to designs, animations, shadows, color theory and sections to learn the concepts behind UI/UX and Frontend development.
 
@@ -68,3 +69,4 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 <!-- Markdown link & img dfn's -->
 [dependencies-image]: https://img.shields.io/david/rubenbase/pickydesign.svg
+[license-image]: https://img.shields.io/badge/license-MIT-brightgreen.svg
