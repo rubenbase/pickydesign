@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-
 import { Link } from "react-router-dom";
+import MiniPalette from "components/MiniPalette";
 
 export default class PaleteList extends Component {
     renderList() {
