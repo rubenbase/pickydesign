@@ -1,0 +1,7 @@
+module.exports = {
+  styledComponents: {
+    // add config for babel-plugin-styled-components here
+    // for example :
+    // ssr: false
+  }
+}

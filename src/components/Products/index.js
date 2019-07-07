@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import img1 from "assets/img/palette.jpg";
-import img2 from "assets/img/lock.jpg";
+// import img2 from "assets/img/lock.jpg";
 import "./style.css";
 export default class Products extends Component {
     render() {

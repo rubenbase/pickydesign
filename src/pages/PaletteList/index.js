@@ -9,6 +9,7 @@ export default class PaleteList extends Component {
             return (
                 <div>
                     <div>
+                        <MiniPalette {...palette} />
                         <Link to={`/palettes/${palette.id}`}>
                             {palette.paletteName}
                         </Link>
