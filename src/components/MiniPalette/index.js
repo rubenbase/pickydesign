@@ -35,7 +35,7 @@ export default function MiniPalette(props) {
     return (
         <Container>
             <div>
-                <h1>.</h1>
+                <h1 />
             </div>
             <Title>
                 {paletteName}
