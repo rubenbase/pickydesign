@@ -26,8 +26,8 @@ const Container = styled.div`
 `;
 
 const MiniColor = styled.div`
-    width: 25%;
-    height: 20%;
+    width: 20%;
+    height: 25%;
     display: inline-block;
     margin: 0 auto;
     position: relative;
@@ -39,6 +39,8 @@ const ColorsContainer = styled.div`
     background-color: grey;
     height: 150px;
     width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
 `;
 
 const Emoji = styled.span`

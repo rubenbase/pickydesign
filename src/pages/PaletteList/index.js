@@ -21,6 +21,7 @@ const Container = styled.div`
 
 const Nav = styled.div`
     display: flex;
+
     width: 100%;
     justify-content: space-between;
     color: white;
@@ -38,11 +39,12 @@ export default class PaleteList extends Component {
     renderList() {
         return this.props.palettes.map(palette => {
             return (
-                <Palettes>
-                    <Link to={`/palettes/${palette.id}`}>
-                        <MiniPalette {...palette} />
-                    </Link>
-                </Palettes>
+                <Link
+                    style={{ textDecoration: "none" }}
+                    to={`/palettes/${palette.id}`}
+                >
+                    <MiniPalette {...palette} />
+                </Link>
             );
         });
     }
@@ -54,10 +56,17 @@ export default class PaleteList extends Component {
                 <StyledPaleteList>
                     <Container>
                         <Nav>
-                            <h1>Color Section</h1>
+                            <h1>Flat</h1>
                         </Nav>
-
-                        {this.renderList()}
+                        <Palettes>{this.renderList()}</Palettes>
+                        <Nav>
+                            <h1>
+                                Gradients{" "}
+                                <span style={{ fontSize: "0.3em" }}>
+                                    (coming soon)
+                                </span>
+                            </h1>
+                        </Nav>
                     </Container>
                 </StyledPaleteList>
             </>
