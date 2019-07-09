@@ -25,18 +25,33 @@ const Container = styled.div`
     }
 `;
 
+const MiniColor = styled.div`
+    width: 25%;
+    height: 20%;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    background: ${props => props.color.color};
+    margin-bottom: -3.5px;
+`;
+
+const ColorsContainer = styled.div`
+    background-color: grey;
+    height: 150px;
+    width: 100%;
+`;
+
 const Emoji = styled.span`
     margin-left: 0.5rem;
     font-size: 1.5rem;
 `;
 
 export default function MiniPalette(props) {
-    const { paletteName, emoji } = props;
+    const { paletteName, emoji, colors } = props;
+    const colorList = colors.map(color => <MiniColor color={color} />);
     return (
         <Container>
-            <div>
-                <h1 />
-            </div>
+            <ColorsContainer>{colorList}</ColorsContainer>
             <Title>
                 {paletteName}
                 <Emoji>{emoji}</Emoji>
