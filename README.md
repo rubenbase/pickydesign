@@ -21,6 +21,9 @@ cd pickydesign
 ```
 
 ## Development setup
+
+Add dependencies: 
+
 npm:
 
 ```sh
@@ -33,6 +36,8 @@ yarn:
 yarn && yarn start
 
 ```
+
+Create a .env file and add NODE_PATH=src/ 
 
 ## Future Release History
 * 0.4.0
