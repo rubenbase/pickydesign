@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 export default class ColorBox extends Component {
     constructor(props) {
         super(props);
@@ -26,6 +27,9 @@ export default class ColorBox extends Component {
     }
 
     onChangeCopied() {}
+    onClickMore(e) {
+        e.stopPropagation();
+    }
 
     render() {
         const { background, name } = this.props;
@@ -53,7 +57,9 @@ export default class ColorBox extends Component {
                     </div>
                     <button className="ColorBox__btn--copy">Copy</button>
                 </div>
-                <span className="ColorBox__more">More</span>
+                <Link to="/" onClick={this.onClickMore}>
+                    <span className="ColorBox__more">More</span>
+                </Link>
             </div>
         );
     }

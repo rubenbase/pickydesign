@@ -3,7 +3,7 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import "./style.css";
 import Select from "react-select";
-
+import { Link } from "react-router-dom";
 const options = [
     { value: "hex", label: "HEX" },
     { value: "rgb", label: "RGB" },
@@ -54,7 +54,7 @@ export default class ColorNavbar extends Component {
         return (
             <header className="Navbar">
                 <div className="Navbar__logo">
-                    <a href="/">
+                    <Link to="/">
                         <span className="Navbar__logo__text--picky">Picky</span>
                         <span
                             className="Navbar__logo__text--design"
@@ -62,7 +62,7 @@ export default class ColorNavbar extends Component {
                         >
                             Design
                         </span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="Navbar__container">
                     <div className="Navbar__slider__container">
